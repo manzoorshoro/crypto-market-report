@@ -154,7 +154,7 @@ now_str = datetime.now(timezone.utc).astimezone(pk_tz).strftime("%Y-%m-%d %H:%M 
 st.caption(f"Last updated: {now_str}")
 
 # Display landing page link
-landing_page_url = "https://<manzoorshoro>.github.io/crypto-market-report"  # Replace with your actual GitHub Pages URL
+landing_page_url = "https://manzoorshoro.github.io/crypto-market-report"  # Replace with your actual GitHub Pages URL
 st.markdown(f"### Welcome to the Crypto Market Report app!")
 st.markdown(f"Click here to visit the [Landing Page]({landing_page_url})")
 
@@ -181,4 +181,5 @@ df_display["24h %"]     = df_display["24h %"].map(lambda x: f"{x:+.2f}%" if pd.n
 df_display["Market Cap"]= df_display["Market Cap"].map(lambda x: f"${x:,.0f}" if pd.notna(x) else "—")
 
 st.dataframe(df_display, use_container_width=True)
+
 
