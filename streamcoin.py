@@ -1,4 +1,3 @@
-# streamcoin.py
 import requests
 import pandas as pd
 from datetime import datetime, timezone
@@ -153,6 +152,11 @@ if st.button("🔄 Refresh Data"):
 pk_tz = tz.gettz("Asia/Karachi")
 now_str = datetime.now(timezone.utc).astimezone(pk_tz).strftime("%Y-%m-%d %H:%M %Z")
 st.caption(f"Last updated: {now_str}")
+
+# Display landing page link
+landing_page_url = "https://<your_username>.github.io/crypto-market-report"  # Replace with your actual GitHub Pages URL
+st.markdown(f"### Welcome to the Crypto Market Report app!")
+st.markdown(f"Click here to visit the [Landing Page]({landing_page_url})")
 
 # Fetch + show
 try:
