@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Crypto Market Report — Live Streamlit App</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Live crypto prices, clean table, excludes stablecoins/wrapped. Built with Streamlit.">
+  <style>
+    :root{
+      --bg:#0f172a; --fg:#e2e8f0; --muted:#94a3b8; --card:#111827; --accent:#22c55e; --line:#1f2937;
+    }
+    *{box-sizing:border-box} body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,sans-serif;background:var(--bg);color:var(--fg)}
+    .wrap{max-width:1000px;margin:0 auto;padding:28px 16px}
+    header{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}
+    header a{color:var(--muted);text-decoration:none;margin-left:14px}
+    .hero{display:grid;grid-template-columns:1.2fr 1fr;gap:22px;align-items:center;margin-top:16px}
+    h1{font-size:40px;line-height:1.1;margin:0 0 10px}
+    p.lead{font-size:18px;color:var(--muted);margin:0 0 10px}
+    .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px}
+    .btn{display:inline-block;background:var(--accent);color:#062; font-weight:700; padding:12px 16px; border-radius:12px; text-decoration:none}
+    .btn.outline{background:transparent;color:var(--fg);border:1px solid var(--fg)}
+    .row{display:flex;gap:12px;flex-wrap:wrap}
+    .grid{display:grid;gap:14px}
+    .g3{grid-template-columns:repeat(3,1fr)}
+    footer{border-top:1px solid var(--line);margin-top:28px;padding-top:14px;color:var(--muted);font-size:14px}
+    img.ss{width:100%;border-radius:12px;border:1px solid var(--line)}
+    @media (max-width:900px){.hero{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <strong>Crypto Market Report</strong>
+      <nav>
+        <a href="#features">Features</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div>
+        <h1>Live Crypto Prices. Zero setup.</h1>
+        <p class="lead">Top coins (ex-stablecoins), market cap, 24h change — refreshed live in a clean Streamlit UI.</p>
+        <div class="row" style="margin:12px 0 8px">
+          <a class="btn" href="YOUR_STREAMLIT_URL" target="_blank">🚀 Try the Demo</a>
+          <a class="btn outline" href="YOUR_CHECKOUT_URL" target="_blank">💳 Subscribe</a>
+        </div>
+        <p style="color:#9fb; font-size:14px; margin-top:6px">No login now — subscriptions and license keys coming next.</p>
+      </div>
+      <div class="card">
+        <!-- Optional screenshot; replace screenshot.png when you add it -->
+        <img class="ss" src="screenshot.png" alt="App screenshot (Streamlit)">
+      </div>
+    </section>
+
+    <section id="features" style="margin-top:26px">
+      <h2>Features</h2>
+      <div class="grid g3">
+        <div class="card"><b>Live Prices</b><br><span style="color:#a6b3c2">Data from CoinGecko, refreshed on demand.</span></div>
+        <div class="card"><b>Smart Filters</b><br><span style="color:#a6b3c2">Excludes stables & wrapped automatically.</span></div>
+        <div class="card"><b>Fast & Simple</b><br><span style="color:#a6b3c2">One screen, clean numbers, no noise.</span></div>
+      </div>
+    </section>
+
+    <section id="pricing" style="margin-top:26px">
+      <h2>Pricing</h2>
+      <div class="grid g3">
+        <div class="card">
+          <b>Monthly</b><br><span style="font-size:22px">$5</span><br>
+          <a class="btn" href="YOUR_CHECKOUT_URL" target="_blank">Start Monthly</a>
+        </div>
+        <div class="card">
+          <b>Yearly</b><br><span style="font-size:22px">$49</span><br>
+          <a class="btn" href="YOUR_CHECKOUT_URL" target="_blank">Start Yearly</a>
+        </div>
+        <div class="card">
+          <b>Team/Classroom</b><br><span>Contact</span><br>
+          <a class="btn outline" href="mailto:you@example.com">Contact</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" style="margin-top:26px">
+      <h2>FAQ</h2>
+      <div class="grid">
+        <div class="card"><b>Do I need an account?</b><br><span style="color:#a6b3c2">Not for the demo. For paid: you’ll get a license key after subscribing.</span></div>
+        <div class="card"><b>How is access controlled?</b><br><span style="color:#a6b3c2">We’ll validate your license key in-app (no separate login).</span></div>
+        <div class="card"><b>Can I cancel anytime?</b><br><span style="color:#a6b3c2">Yes — manage from your receipt portal.</span></div>
+      </div>
+    </section>
+
+    <footer>© 2025 Crypto Market Report • <a href="YOUR_STREAMLIT_URL" style="color:#9fb">Open the app</a></footer>
+  </div>
+</body>
+</html>
